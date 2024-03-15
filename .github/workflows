@@ -1,0 +1,12 @@
+name: "build and lint"
+run-name: "Running build and lint"
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "yarn install"
+      - run: "yarn lint"
+      - run: "yarn build"
