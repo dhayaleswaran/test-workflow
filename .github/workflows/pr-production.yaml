@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [opened]
 jobs:
-  pull_request:
+  lint_and_build:
     runs-on: ubuntu-latest
     steps:
       - run: "yarn install"
